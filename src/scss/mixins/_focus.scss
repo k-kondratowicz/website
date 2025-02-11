@@ -1,0 +1,13 @@
+@use 'sass:list';
+
+@mixin focus($selectors...) {
+	@if list.length($selectors) > 0 {
+		#{$selectors} {
+			@content;
+		}
+	}
+
+	&:focus-visible {
+		@content;
+	}
+}
