@@ -1,0 +1,21 @@
+@use 'sass:list';
+
+@mixin hover($include_focus: true, $selectors...) {
+	@if list.length($selectors) > 0 {
+		#{$selectors} {
+			@content;
+		}
+	}
+
+	&:hover {
+		@media (hover: hover) and (pointer: fine) {
+			@content;
+		}
+	}
+
+	@if $include_focus {
+		@include focus($selectors...) {
+			@content;
+		}
+	}
+}

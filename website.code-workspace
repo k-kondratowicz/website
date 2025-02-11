@@ -1,0 +1,30 @@
+{
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
+    "settings": {
+        "editor.tabSize": 4,
+        "editor.insertSpaces": false,
+        "eslint.format.enable": true,
+        "eslint.workingDirectories": [
+            "./"
+        ],
+        "editor.codeActionsOnSave": {
+            "source.fixAll.eslint": "explicit",
+            "source.fixAll.stylelint": "explicit"
+        },
+        "stylelint.configBasedir": ".",
+        "stylelint.packageManager": "yarn",
+        "stylelint.enable": true,
+        "stylelint.validate": [
+            "css",
+            "scss"
+        ],
+        "css.validate": false,
+        "less.validate": false,
+        "scss.validate": false,
+        "diffEditor.wordWrap": "on"
+    }
+}

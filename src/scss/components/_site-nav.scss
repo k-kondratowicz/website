@@ -1,0 +1,19 @@
+.site-nav {
+	padding-block: 2.4rem;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	font-weight: bold;
+
+	&__link {
+		@include underline(true);
+
+		line-height: 1;
+	}
+
+	&__divider {
+		display: inline-block;
+		margin-inline: 0.8rem;
+	}
+}
