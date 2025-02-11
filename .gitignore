@@ -1,4 +1,3 @@
-
 # VAGRANT
 .vagrant/
 
@@ -9,7 +8,6 @@
 # Composer
 composer.phar
 vendor/
-auth.json
 
 # Project
 .sass-cache
@@ -17,5 +15,3 @@ dist/
 bower_components/
 node_modules/
 .DS_Store
-
-_RESSOURCES/
