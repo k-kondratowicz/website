@@ -27,7 +27,6 @@
 		"autoprefixer": "^10.4.20",
 		"eslint": "^8.57.1",
 		"eslint-config-prettier": "^9.1.0",
-		"eslint-plugin-lit": "^1.15.0",
 		"eslint-plugin-prettier": "^5.2.1",
 		"eslint-plugin-simple-import-sort": "^12.1.1",
 		"eslint-plugin-vue": "^9.30.0",
@@ -48,7 +47,8 @@
 		"vite": "5.4.8",
 		"vite-plugin-babel": "^1.2.0",
 		"vite-plugin-checker": "^0.8.0",
-		"vite-plugin-resolve": "^2.5.2"
+		"vite-plugin-resolve": "^2.5.2",
+		"vite-plugin-sitemap": "^0.7.1"
 	},
 	"dependencies": {}
 }

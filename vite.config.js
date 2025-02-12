@@ -4,6 +4,7 @@ import { resolve } from 'path';
 import { defineConfig } from 'vite';
 import babel from 'vite-plugin-babel';
 import checker from 'vite-plugin-checker';
+import sitempa from 'vite-plugin-sitemap';
 
 const fullPath = import.meta.url.slice(0, import.meta.url.lastIndexOf('/'));
 
@@ -27,6 +28,10 @@ export default defineConfig({
 				}
 			},
 		},
+		sitempa({
+			hostname: 'https://kkondratowicz.pl',
+			exclude: ['/googlecf7b814f707ec9bf', '/404'],
+		}),
 	],
 
 	css: {
