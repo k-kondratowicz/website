@@ -1,0 +1,17 @@
+@use 'sass:string';
+
+@mixin arrow-slide-animation($from: 0, $to: 100px) {
+	$animationId: string.unique-id();
+
+	animation: arrow-animation-#{$animationId} 0.45s linear infinite both;
+
+	@keyframes arrow-animation-#{$animationId} {
+		0% {
+			background-position-x: $from;
+		}
+	
+		100% {
+			background-position-x: $to;
+		}
+	}
+}

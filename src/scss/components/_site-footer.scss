@@ -1,0 +1,13 @@
+.site-footer {
+	width: 100%;
+	position: absolute;
+	bottom: 0.8rem;
+	font-size: 1.4rem;
+	text-align: center;
+
+	&__link {
+		@include focus {
+			outline: 1px solid black;
+		}
+	}
+}

@@ -1,0 +1,167 @@
+.card {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	max-width: 38.5rem;
+	margin: auto;
+	position: relative;
+	border-radius: 1.6rem;
+	background-color: $color_light;
+	background-image: url('@images/card-gradient.webp');
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: cover;
+	background-size: auto calc(100% + 2px);
+	box-shadow: 5px 5px 15px rgba($color_dark, 0.2);
+
+	&::after {
+		content: '';
+		position: absolute;
+		inset: 0;
+		z-index: 10;
+		pointer-events: none;
+		opacity: 0.25;
+		background-image: url('@images/noise.webp');
+		background-size: cover;
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		inset: 0;
+		z-index: -1;
+		opacity: 0.9;
+		border: 1px solid rgba($color_dark, 0.2);
+		border-radius: 1.6rem;
+		background-color: rgba($color_light_blue, 0.75);
+		background-image: url('@images/card-gradient.webp');
+		background-repeat: no-repeat;
+		background-position: 0 0;
+		rotate: -4deg;
+		mix-blend-mode: luminosity;
+
+		@include bp-mobile {
+			rotate: -3deg;
+		}
+	}
+
+
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 0.8rem;
+		height: 100%;
+		margin: 1.6rem;
+		padding: 0.8rem;
+		border: 2px solid $color_dark;
+		border-radius: 1.2rem;
+	}
+
+	&__header {
+		margin-block: -0.8rem -0.4rem;
+		padding-inline: 1.2rem;
+	}
+
+	&__heading {
+		font-size: 3.4rem;
+		font-weight: 600;
+		letter-spacing: -0.025em;
+	}
+
+	&__position {
+		display: block;
+		margin-top: -0.8rem;
+		padding-left: 0.1rem;
+		font-size: 1.5rem;
+		font-weight: 500;
+		letter-spacing: normal;
+		text-transform: uppercase;
+	}
+
+	&__visual {
+		border: 2px solid $color_dark;
+		border-radius: 0.8rem;
+		background-color: rgba($color_dark, 0.5);
+		background-image: url('@images/avatar-background.webp');
+		background-position: top;
+		background-size: 150%;
+		background-blend-mode: exclusion;
+	}
+
+	&__image {
+		aspect-ratio: 1.2;
+		object-fit: contain;
+		margin-top: -2.4rem;
+
+		@include bp-mobile {
+			margin-top: -1.6rem;
+		}
+	}
+
+	&__nav {
+		display: flex;
+		flex-direction: column;
+		gap: 0.8rem;
+		text-transform: uppercase;
+	}
+
+	&__nav-link {
+		display: flex;
+		align-items: center;
+		height: 3.8rem;
+		padding-inline: 1.2rem;
+		position: relative;
+		font-size: 1.8rem;
+		font-weight: 500;
+		border: 2px solid $color_dark;
+		border-radius: 0.8rem;
+		background-color: $color_light;
+
+		@include bp-mobile {
+			height: 3.5rem;
+			font-size: 1.6rem;
+		}
+
+		@include hover {
+			&::after {
+				@include arrow-slide-animation(0, var(--arrow-size));
+			}
+		}
+
+		&::after {
+			--arrow-size: 1.4rem;
+
+			content: '';
+			display: block;
+			width: var(--arrow-size);
+			height: var(--arrow-size);
+			position: absolute;
+			top: calc(50% - var(--arrow-size) / 2);
+			right: 1.2rem;
+			background-image: url('@images/arrow.svg');
+			background-position-x: 0;
+			background-size: var(--arrow-size);
+
+			@include bp-mobile {
+				--arrow-size: 1.2rem;
+			}
+		}
+	}
+
+	&__skill {
+		margin-block: auto;
+		padding-block: 2rem;
+		font-weight: normal;
+		text-align: center;
+
+		@include bp-mobile {
+			padding-block: 0.4rem;
+		}
+
+		span {
+			@include bp-mobile {
+				display: block;
+			}
+		}
+	}
+}

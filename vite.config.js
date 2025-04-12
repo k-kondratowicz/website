@@ -45,6 +45,8 @@ export default defineConfig({
 					@import '${fullPath}/src/scss/abstracts/index.scss';
 					@import '${fullPath}/src/scss/mixins/index.scss';
 				`,
+
+				silenceDeprecations: ['import'],
 			},
 		},
 
@@ -80,6 +82,8 @@ export default defineConfig({
 
 	resolve: {
 		alias: {
+			'@fonts': '/fonts',
+			'@images': '/images',
 			'@': resolve(fullPath + '/src/js'),
 			'@root': process.env.NODE_ENV === 'development' ? resolve(fullPath) : '',
 			'@public': process.env.NODE_ENV === 'development' ? resolve(fullPath + '/public') : '/',

@@ -2,7 +2,6 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Hello</title>
 		<link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
@@ -13,22 +12,44 @@
 	</head>
 	<body>
 		<article class="site-wrapper">
-			<h1 class="site-title">
-				<img src="/images/hello.svg"  alt="Hello" class="site-title__visual" />
-			</h1>
+			<div class="card">
+				<div class="card__wrapper">
+					<header class="card__header">
+						<h1 class="card__heading">
+							Kamil
+							<span class="card__position">Front-end Developer</span>
+						</h1>
+					</header>
 
-			<nav class="site-nav">
-				<a href="https://github.com/k-kondratowicz" class="site-nav__link" rel="nofollow noreferrer">Github</a>
-				
-				<span class="site-nav__divider">·</span>
-				
-				<a href="mailto:kontakt@kkondratowicz.pl" class="site-nav__link js-mailto" rel="nofollow noreferrer">Email</a>
+					<figure class="card__visual">
+						<img src="/images/avatar.webp" alt="" class="card__image" width="512" height="512" />
+					</figure>
 
-				<span class="site-nav__divider">·</span>
-				
-				<a href="https://www.linkedin.com/in/kamil-kondratowicz-ba4b6011a/" class="site-nav__link" rel="nofollow noreferrer">LinkedIn</a>
-			</nav>
+					<nav class="card__nav">
+						<a href="https://github.com/k-kondratowicz" class="card__nav-link" rel="nofollow noreferrer">Github</a>
+
+						<a href="https://www.linkedin.com/in/kamil-kondratowicz/" class="card__nav-link" rel="nofollow noreferrer">LinkedIn</a>
+
+						<a href="mailto:kontakt@kkondratowicz.pl" class="card__nav-link" rel="nofollow noreferrer">Email</a>
+					</nav>
+
+					<div class="card__skill">
+						<span>Special Attack:</span> 1000 lines of CSS in 5 minutes
+					</div>
+				</div>
+			</div>
 		</article>
+		
+		<footer class="site-footer">
+				Inspiration - 
+				<a 
+					href="https://www.linkedin.com/posts/robertborghesi_touching-grass-a-wild-dev-appears-activity-7312401689917952003-H5mT/" 
+					rel="nofollow noreferrer"
+				>
+					Robert Borghesi
+				</a>
+		</footer>
+
 		<script type="module" src="/src/js/main.ts"></script>
 	</body>
 </html>

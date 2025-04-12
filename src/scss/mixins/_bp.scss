@@ -3,3 +3,15 @@
 		@content;
 	}
 }
+
+@mixin bp-portrait {
+	@include bp(1024) {
+		@content;
+	}
+}
+
+@mixin bp-mobile {
+	@include bp(520) {
+		@content;
+	}
+}
