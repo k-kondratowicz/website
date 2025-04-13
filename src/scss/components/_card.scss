@@ -55,6 +55,8 @@
 		padding: 0.8rem;
 		border: 2px solid $color_dark;
 		border-radius: 1.2rem;
+		background-color: rgba($color_light, 0.15);
+		backdrop-filter: hue-rotate(25deg);
 	}
 
 	&__header {
