@@ -11,16 +11,52 @@
 		padding-top: 3rem;
 	}
 
-	&::before {
+	&::before,
+	&::after {
 		content: '';
 		position: absolute;
 		inset: -25px;
 		z-index: -1;
 		pointer-events: none;
+
+		// opacity: 0.75;
 		background-image: url('@images/card-gradient.webp');
 		background-position: 50% 50%;
 		background-size: cover;
 		filter: blur(25px);
 		scale: -1 1;
+	}
+	
+	&::before {
+		scale: -1 1;
+
+		// animation: bg-out 6s linear infinite both alternate;
+	}
+	
+	&::after {
+		animation: bg-in 10s linear infinite both alternate;
+		opacity: 0;
+		scale: 1 -1;
+	}
+}
+
+@keyframes bg-out {
+	0% {
+		opacity: 0.75;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+
+@keyframes bg-in {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 0.75;
 	}
 }
